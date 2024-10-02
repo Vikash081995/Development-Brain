@@ -7,7 +7,7 @@ const http = require("http");
 //req and res boh are the callback function parameters
 //that are used to node.js- queries, params,body and even cookies
 const server = http.createServer(function (req, res) {
-  res.writeHead(20, { "Content-Type": "text/html" });
+  res.writeHead(200, { "Content-Type": "text/html" });
   if (req.url == "/") {
     res.write(
       "   <html>  <body>           <p>This is a homepage</p>  </body> </html> "
