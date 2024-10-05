@@ -9,9 +9,7 @@ const http = require("http");
 const server = http.createServer(function (req, res) {
   res.writeHead(200, { "Content-Type": "text/html" });
   if (req.url == "/") {
-    res.write(
-      "   <html>  <body>           <p>This is a homepage</p>  </body> </html> "
-    );
+    res.write(" <html><body><p>This is a homepage</p></body></html> ");
   }
 });
 

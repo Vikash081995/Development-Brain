@@ -1,5 +1,6 @@
 import { createServer } from "http";
-import { handler } from "../node-server-method1/handler";
+import { handler } from "../handler";
+
 const port = 5000;
 const server = createServer();
 server.on("request", handler);
