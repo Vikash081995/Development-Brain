@@ -10,7 +10,7 @@ const routeResponseMap = {
   "/error": "<h1>Sorry the page you are looking for is not here.</h1>",
 };
 
-app.on("reuest", (req, res) => {
+app.on("request", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
   if (routeResponseMap[(req, url)]) {
     res.end(routeResponseMap[req.url]);

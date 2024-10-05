@@ -1,18 +1,9 @@
-import express from "express";
+import { createServer } from "http";
+import { handler } from "./POC/Node/Node-with-ts/handler";
 
-const app = express();
-const port = 3000;
+const port = 5000;
+const server = createServer(handler);
 
-//define routes
-
-//refers tto how an application's endpoints-URI respond to client client requests
-//All URLs are  URIs but not all URIs are URLs( HTML,XML,JSON)
-
-//the app object includes get() post() put() and delete()
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
-
-app.listen(port, () => {
-  console.log(`Hello world app is listening at port 3000`);
+server.listen(port, () => {
+  console.log(`server is listening on port ${port}`);
 });
