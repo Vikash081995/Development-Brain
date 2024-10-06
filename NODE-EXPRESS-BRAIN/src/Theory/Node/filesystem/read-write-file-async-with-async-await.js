@@ -1,11 +1,11 @@
-const fs = require("fs")
+const fs = require("fs");
 import path from "path";
 import util from "util";
-const WriteFile = util.promisify(fs.writeFile)
-const ReadFile = util.promisify(fs.readFile)
+const WriteFile = util.promisify(fs.writeFile);
+const ReadFile = util.promisify(fs.readFile);
 async function WriteFileAsync() {
   try {
-    await fs.writeFile(
+    await WriteFile(
       path.join(__dirname, "/data/dummy3-promise.txt"),
       "readingfilewithpromises"
     );
@@ -21,7 +21,7 @@ WriteFileAsync();
 
 async function ReadFileAsync() {
   try {
-    const content = await fs.readFile(
+    const content = await ReadFile(
       path.join(__dirname, "/data/dummy3-promise.txt"),
       "utf8"
     );
